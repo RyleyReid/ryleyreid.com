@@ -9,6 +9,7 @@
   align-items: center;
   position: absolute;
   color: white;
+  z-index: 10;
 
   h2 {
     span {
@@ -36,9 +37,40 @@
   position: absolute;
   bottom: 0;
   width: $full;
-  margin-bottom: -10px; 
+  margin-bottom: -10px;
   min-height: 100px;
   max-height: 250px;
+  z-index: 10;
+}
+
+.icons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.icon {
+  position: absolute;
+  bottom: 0;
+  width: 100px; 
+  height: 100px; 
+  object-fit: contain;
+  animation: jump 2s ease-out forwards;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Animation */
