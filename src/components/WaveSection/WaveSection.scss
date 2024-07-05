@@ -1,26 +1,12 @@
-body {
-  margin: 0;
-}
+@import "src/scss/base.scss";
 
-img {
-  margin: 0 -40px;
-}
-
-.inner-header {
-  height: 65vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex {
+.title {
   display: flex;
+  flex-direction: column;
+  width: $full;
+  height: $full;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-
-.title{
   position: absolute;
   color: white;
 }
@@ -28,17 +14,10 @@ img {
 .waves {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  margin-bottom: -7px; 
+  width: $full;
+  margin-bottom: -10px; 
   min-height: 100px;
   max-height: 250px;
-}
-
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: white;
 }
 
 /* Animation */
