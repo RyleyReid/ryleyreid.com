@@ -58,7 +58,7 @@
   width: 100px; 
   height: 100px; 
   object-fit: contain;
-  animation: jump 2s ease-out forwards;
+  animation: jump 2s ease-out forwards, arcMove 4s ease-out forwards;
 }
 
 @keyframes jump {
@@ -70,6 +70,18 @@
   }
   100% {
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes arcMove {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(50vw) translateY(-50vh) scale(1.2);
+  }
+  100% {
+    transform: translateX(100vw) translateY(0) scale(1);
   }
 }
 

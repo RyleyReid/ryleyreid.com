@@ -13,15 +13,29 @@ export default function() {
     
     // Function to determine the next section to scroll to
     const determineScroll = (e) => {
-        if (e.deltaY > 0) { // Scroll Down
-            if (currentSectionIndex < sections.length - 1) {
-                currentSectionIndex++;
-                scrollToSection(currentSectionIndex);
+        if (e.type === 'wheel') {
+            if (e.deltaY > 0) { // Scroll Down
+                if (currentSectionIndex < sections.length - 1) {
+                    currentSectionIndex++;
+                    scrollToSection(currentSectionIndex);
+                }
+            } else { // Scroll Up
+                if (currentSectionIndex > 0) {
+                    currentSectionIndex--;
+                    scrollToSection(currentSectionIndex);
+                }
             }
-        } else { // Scroll Up
-            if (currentSectionIndex > 0) {
-                currentSectionIndex--;
-                scrollToSection(currentSectionIndex);
+        } else if (e.type === 'keydown') {
+            if (e.key === 'ArrowDown') { // Arrow Down
+                if (currentSectionIndex < sections.length - 1) {
+                    currentSectionIndex++;
+                    scrollToSection(currentSectionIndex);
+                }
+            } else if (e.key === 'ArrowUp') { // Arrow Up
+                if (currentSectionIndex > 0) {
+                    currentSectionIndex--;
+                    scrollToSection(currentSectionIndex);
+                }
             }
         }
     }
@@ -43,5 +57,6 @@ export default function() {
     };
     
     window.addEventListener('wheel', debounce(determineScroll, 100));
-  }
+    window.addEventListener('keydown', debounce(determineScroll, 100));
+}
   

@@ -37,9 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const icon = document.createElement("img");
     icon.src = icons[iconIndex % icons.length];
     icon.classList.add("icon");
-    icon.style.left = `${Math.random() * 90 + 5}%`; 
+    
+    icon.style.left = `${Math.floor(Math.random() * 35) + 1}%`; 
     iconsContainer.appendChild(icon);
     iconIndex++;
+
+    icon.style.animation = `arcMove 4s ease-out forwards`;
 
     icon.addEventListener("animationend", () => {
       icon.remove();
