@@ -16,12 +16,12 @@
       display: inline-block;
       transition: transform 0.3s;
       cursor: pointer;
+
+      &:hover {
+        animation: letterBounce 0.3s ease;
+      }
     }
   }
-}
-
-.letterBounce {
-  animation: letterBounce 0.3s ease;
 }
 
 @keyframes letterBounce {

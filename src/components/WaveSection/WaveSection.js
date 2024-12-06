@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!backwardIcon) {
         backwardIcon = createIcon(false);
       }
-    }, 1000); // Delay for half the icon's lifetime (2s total lifetime)
+    }, 1500); // Delay for half the icon's lifetime (2s total lifetime)
   }
 
   // Spawn icons at staggered intervals
