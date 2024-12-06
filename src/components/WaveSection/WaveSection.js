@@ -57,5 +57,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Spawn icons at staggered intervals
-  setInterval(spawnIcons, 2000);
+  setInterval(spawnIcons, 1500);
 });
