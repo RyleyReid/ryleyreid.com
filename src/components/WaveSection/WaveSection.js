@@ -1,27 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const nameElement = document.getElementById("name");
-  const nameText = nameElement.innerText;
-  nameElement.innerHTML = "";
-
-  nameText.split("").forEach((letter) => {
-    const span = document.createElement("span");
-    span.innerText = letter;
-    nameElement.appendChild(span);
-  });
-
-  nameElement.addEventListener("mouseover", function (event) {
-    if (event.target.tagName === "SPAN") {
-      event.target.classList.add("letterBounce");
-      event.target.addEventListener(
-        "animationend",
-        () => {
-          event.target.classList.remove("letterBounce");
-        },
-        { once: true }
-      );
-    }
-  });
-
   const iconsContainer = document.getElementById("icons-container");
   const icons = [
     "waveIcons/canada.svg", 
@@ -32,8 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "waveIcons/scotland.svg", 
   ]; 
   let iconIndex = 0;
+  let forwardIcon = null;
+  let backwardIcon = null;
 
-  function createIcon() {
+  function createIcon(isForward) {
     const square = document.createElement("div");
     square.classList.add("square");
 
@@ -45,14 +24,38 @@ document.addEventListener("DOMContentLoaded", function () {
     iconsContainer.appendChild(square);
     iconIndex++;
 
-    square.style.left = `${Math.floor(Math.random() * 35) + 1}%`;
+    // Determine spawn range
+    if (isForward) {
+      square.style.left = `${Math.floor(Math.random() * 17) + 1}%`; // Front half
+    } else {
+      square.style.left = `${Math.floor(Math.random() * 17) + 18}%`; // Back half
+    }
 
     square.style.animation = `rotateSquare 4s ease-out forwards`;
 
     square.addEventListener("animationend", () => {
       square.remove();
+      if (isForward) {
+        forwardIcon = null;
+      } else {
+        backwardIcon = null;
+      }
     });
+
+    return square;
   }
 
-  setInterval(createIcon, 2000);
+  function spawnIcons() {
+    if (!forwardIcon) {
+      forwardIcon = createIcon(true);
+    }
+    setTimeout(() => {
+      if (!backwardIcon) {
+        backwardIcon = createIcon(false);
+      }
+    }, 1000); // Delay for half the icon's lifetime (2s total lifetime)
+  }
+
+  // Spawn icons at staggered intervals
+  setInterval(spawnIcons, 2000);
 });
