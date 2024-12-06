@@ -34,18 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
   let iconIndex = 0;
 
   function createIcon() {
+    const square = document.createElement("div");
+    square.classList.add("square");
+
     const icon = document.createElement("img");
     icon.src = icons[iconIndex % icons.length];
     icon.classList.add("icon");
-    
-    icon.style.left = `${Math.floor(Math.random() * 35) + 1}%`; 
-    iconsContainer.appendChild(icon);
+
+    square.appendChild(icon);
+    iconsContainer.appendChild(square);
     iconIndex++;
 
-    icon.style.animation = `arcMove 4s ease-out forwards`;
+    square.style.left = `${Math.floor(Math.random() * 35) + 1}%`;
 
-    icon.addEventListener("animationend", () => {
-      icon.remove();
+    square.style.animation = `rotateSquare 4s ease-out forwards`;
+
+    square.addEventListener("animationend", () => {
+      square.remove();
     });
   }
 
