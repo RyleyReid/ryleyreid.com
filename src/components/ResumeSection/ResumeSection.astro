@@ -3,61 +3,69 @@ import "./ResumeSection.scss";
 ---
 
 <section class="resume-section">
-  <h2>Ryley Reid</h2>
-  <p>2121 Lake Shore Blvd W., Etobicoke, ON | ryleycreid@gmail.com | 289-355-8106 | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  <h2 id="name">Ryley Reid</h2>
+  <p id="contact-info">2121 Lake Shore Blvd W., Etobicoke, ON | ryleycreid@gmail.com | 289-355-8106 | <a href="#" class="contact-link">LinkedIn</a> | <a href="#" class="contact-link">GitHub</a></p>
 
-  <h3>EDUCATION</h3>
-  <p>Western University, London, Ontario</p>
-  <p>Honors Bachelor of Science in Computer Science, minor in Software Engineering, Graduated April 2021</p>
-  <p>Coursework: Video Game Development, Data Science, Artificial Intelligence, Data Structures and Algorithms</p>
+  <h3 class="section-title">EDUCATION</h3>
+  <p class="education-institution">Western University, London, Ontario</p>
+  <p class="education-degree">Honors Bachelor of Science in Computer Science, minor in Software Engineering, Graduated April 2021</p>
+  <p class="education-coursework">Coursework: Video Game Development, Data Science, Artificial Intelligence, Data Structures and Algorithms</p>
 
-  <h3>WORK EXPERIENCE</h3>
-  <div class="job">
-    <h4>Ollon, Toronto, Ontario</h4>
-    <p>Full Stack Software Developer, August 2022 – Present</p>
-    <ul>
+  <h3 class="section-title">WORK EXPERIENCE</h3>
+  <div class="job" id="job-ollon">
+    <h4 class="job-title">Ollon, Toronto, Ontario</h4>
+    <p class="job-role">Full Stack Software Developer, August 2022 – Present</p>
+    <ul class="job-details">
       <li>Full-stack development specializing in Typescript, React, Node JS, and MySQL.</li>
       <li>Proficient in developing and integrating Rest APIs, and Scrum team framework utilizing Trello for task management.</li>
       <li>Code reviews, unit testing, and DevOps practices using Git and Docker.</li>
       <li>Develop and maintain bitbucket pipelines with YML</li>
     </ul>
   </div>
-  <div class="job">
-    <h4>TechShare Group, London, Ontario</h4>
-    <p>Full Stack Software Developer, May 2021 – August 2022</p>
-    <ul>
+  <div class="job" id="job-techshare">
+    <h4 class="job-title">TechShare Group, London, Ontario</h4>
+    <p class="job-role">Full Stack Software Developer, May 2021 – August 2022</p>
+    <ul class="job-details">
       <li>Update and maintain user portal and Salesforce application pages using Angular, CSS, and JavaScript</li>
       <li>Manage and update a Salesforce database and APIs using APEX and SOQL</li>
       <li>Scrum Framework using ASANA, unit testing, and Code reviews</li>
     </ul>
   </div>
-  <div class="job">
-    <h4>StudentWorks Painting, Ajax-Pickering, Ontario</h4>
-    <p>Self-Employed Franchisee, November 2019-August 2020</p>
-    <ul>
+  <div class="job" id="job-studentworks">
+    <h4 class="job-title">StudentWorks Painting, Ajax-Pickering, Ontario</h4>
+    <p class="job-role">Self-Employed Franchisee, November 2019-August 2020</p>
+    <ul class="job-details">
       <li>Independently managed 2 labor crews completing contracts for residential and commercial painting.</li>
       <li>Marketed and sold over $65,000 of painting contracts remotely and in-person during the Covid pandemic</li>
     </ul>
   </div>
 
-  <h3>LEADERSHIP EXPERIENCE</h3>
-  <p>The Pi Kappa Alpha Fraternity, London, Ontario</p>
-  <p>President, April 2019 – April 2020</p>
-  <ul>
+  <h3 class="section-title">LEADERSHIP EXPERIENCE</h3>
+  <p class="leadership-organization">The Pi Kappa Alpha Fraternity, London, Ontario</p>
+  <p class="leadership-role">President, April 2019 – April 2020</p>
+  <ul class="leadership-details">
     <li>Managed Internal and External executive cabinets, as well as enforced bylaws and academic standards</li>
     <li>Had a 200% increase in new member acquisition during the time in office, broke the record for philanthropy</li>
   </ul>
 
-  <h3>PROJECTS & PERSONAL APPS</h3>
-  <div class="project">
-    <h4>Open Frequencies, Toronto, Ontario</h4>
-    <p>Co-founder, June 2023 - Present</p>
-    <ul>
+  <h3 class="section-title">PROJECTS & PERSONAL APPS</h3>
+  <div class="project" id="project-open-frequencies">
+    <h4 class="project-title">Open Frequencies, Toronto, Ontario</h4>
+    <p class="project-role">Co-founder, June 2023 - Present</p>
+    <ul class="project-details">
       <li>Developed a music platform that utilizes AI to bring artists more rapid production results in sample selection</li>
       <li>Created the full web app and architecture using Python, Django, and AWS</li>
     </ul>
   </div>
 
-  <h3>SKILLS</h3>
-  <p>Technical Skills: CSS, HTML, MySQL, Git, REACT, TypeScript, NodeJS. Hire this candidate :)</p>
+  <h3 class="section-title">SKILLS</h3>
+  <p class="skills-list">Technical Skills: CSS, HTML, MySQL, Git, REACT, TypeScript, NodeJS. Hire this candidate :)</p>
 </section>
+
+<script>
+  if (typeof window !== 'undefined') {
+    import('./ResumeSection.js')
+    .then(({ default: run }) => run())
+    .catch(err => console.log(err));
+  }
+</script>
