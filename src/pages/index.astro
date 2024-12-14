@@ -1,7 +1,6 @@
 ---
 import "./index.scss";
-import WaveSection from "../components/WaveSection/WaveSection.astro";
-import ServicesSection from "../components/ServicesSection/ServicesSection.astro";
+import ScrollWrapper from "../components/ScrollWrapper/ScrollWrapper.astro";
 ---
 
 <head>
@@ -9,19 +8,5 @@ import ServicesSection from "../components/ServicesSection/ServicesSection.astro
 	<link rel="icon" href="icons/heart.ico" type="image/x-icon" />
 </head>
 <body>
-	<div id="carousel-1" class="section">
-		<WaveSection />
-	</div>
-	<div id="carousel-2" class="section">
-		<ServicesSection />
-	</div>
-	<div id="carousel-3" class="section">
-	</div>
-	<script>
-		if (typeof window !== 'undefined') {
-			import('./index.js')
-			.then(({ default: run }) => run())
-			.catch(err => console.log(err));
-		}
-	</script>
+	<ScrollWrapper />
 </body>
