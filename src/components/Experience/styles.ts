@@ -19,7 +19,7 @@ export const JobItem = styled.div`
   padding: 1rem;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const JobHeader = styled.div`
@@ -95,4 +95,4 @@ export const Description = styled.ul`
 export const DescriptionItem = styled.li`
   margin: 0.5rem 0;
   line-height: 1.5;
-`; 
+`;

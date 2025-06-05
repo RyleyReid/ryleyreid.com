@@ -11,7 +11,7 @@ import {
   SocialIcon,
   TextContact,
   DownloadButton,
-  DownloadIcon
+  DownloadIcon,
 } from './styles';
 
 const getIconSrc = (iconName: string) => {
@@ -38,8 +38,8 @@ const Header = () => {
           <ContactItem
             key={index}
             href={link.href}
-            target={link.isExternal ? "_blank" : undefined}
-            rel={link.isExternal ? "noopener noreferrer" : undefined}
+            target={link.isExternal ? '_blank' : undefined}
+            rel={link.isExternal ? 'noopener noreferrer' : undefined}
           >
             {link.icon ? (
               <SocialIcon src={getIconSrc(link.icon)} alt={link.alt} />
@@ -50,7 +50,7 @@ const Header = () => {
         ))}
         <TextContact>{location}</TextContact>
       </ContactInfo>
-      <DownloadButton 
+      <DownloadButton
         href={cvDownload.href}
         download={cvDownload.downloadName}
         target="_blank"
@@ -62,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

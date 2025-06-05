@@ -9,7 +9,7 @@ import {
   LinkIcon,
   Degree,
   DateRange,
-  Description
+  Description,
 } from './styles';
 
 const Education = () => {
@@ -33,4 +33,4 @@ const Education = () => {
   );
 };
 
-export default Education; 
+export default Education;

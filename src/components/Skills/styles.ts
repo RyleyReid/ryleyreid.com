@@ -25,10 +25,12 @@ export const SkillTag = styled.span`
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  transition: transform 0.2s, background-color 0.2s;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
 
   &:hover {
     transform: translateY(-2px);
     background: #3a3a3a;
   }
-`; 
+`;

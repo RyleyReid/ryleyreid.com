@@ -13,7 +13,7 @@ import {
   Location,
   DateRange,
   Description,
-  DescriptionItem
+  DescriptionItem,
 } from './styles';
 
 const Experience = () => {
@@ -46,4 +46,4 @@ const Experience = () => {
   );
 };
 
-export default Experience; 
+export default Experience;

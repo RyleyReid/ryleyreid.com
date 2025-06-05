@@ -77,4 +77,4 @@ export const Description = styled.p`
   color: #2c3e50;
   font-size: 0.95rem;
   line-height: 1.5;
-`; 
+`;

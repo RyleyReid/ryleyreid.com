@@ -1,10 +1,5 @@
 import { skills } from './content';
-import {
-  Section,
-  SectionTitle,
-  SkillsContainer,
-  SkillTag
-} from './styles';
+import { Section, SectionTitle, SkillsContainer, SkillTag } from './styles';
 
 const Skills = () => {
   return (
@@ -19,4 +14,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;
