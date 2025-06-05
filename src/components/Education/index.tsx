@@ -10,6 +10,7 @@ import {
   Degree,
   DateRange,
   Description,
+  Minor,
 } from './styles';
 
 const Education = () => {
@@ -24,7 +25,10 @@ const Education = () => {
               <LinkIcon src={linkIcon} alt="Visit school website" />
             </SchoolLink>
           </SchoolName>
-          <Degree>{edu.degree}</Degree>
+          <Degree>
+            {edu.degree}
+          </Degree>
+          <Minor>Minor: {edu.minor}</Minor>
           <DateRange>{edu.dateRange}</DateRange>
           <Description>{edu.description}</Description>
         </EducationItem>

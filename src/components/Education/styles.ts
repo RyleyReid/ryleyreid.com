@@ -67,6 +67,12 @@ export const Degree = styled.p`
   margin-bottom: 0.25rem;
 `;
 
+export const Minor = styled.p`
+  color: #34495e;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+`;
+
 export const DateRange = styled.p`
   color: #7f8c8d;
   font-size: 0.9rem;
