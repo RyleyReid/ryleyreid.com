@@ -2,6 +2,7 @@ import githubLogo from '../../assets/GithubLogo.png';
 import linkedInLogo from '../../assets/linkedInLogo.png';
 import instagramLogo from '../../assets/InstagramLogo.png';
 import download from '../../assets/download.png';
+import mapleLeaf from '../../assets/mapleleaf.png';
 import { contactLinks, location, name, cvDownload } from './content';
 import {
   HeaderContainer,
@@ -12,6 +13,7 @@ import {
   TextContact,
   DownloadButton,
   DownloadIcon,
+  LocationContainer
 } from './styles';
 
 const getIconSrc = (iconName: string) => {
@@ -24,6 +26,8 @@ const getIconSrc = (iconName: string) => {
       return instagramLogo;
     case 'download':
       return download;
+    case 'MapleLeaf':
+      return mapleLeaf;
     default:
       return '';
   }
@@ -48,7 +52,16 @@ const Header = () => {
             )}
           </ContactItem>
         ))}
-        <TextContact>{location}</TextContact>
+        <LocationContainer>
+          <TextContact>{location.text}</TextContact>
+          <ContactItem
+            href={location.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SocialIcon src={getIconSrc(location.icon)} alt={location.alt} />
+          </ContactItem>
+        </LocationContainer>
       </ContactInfo>
       <DownloadButton
         href={cvDownload.href}

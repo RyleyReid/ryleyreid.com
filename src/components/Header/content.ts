@@ -6,6 +6,13 @@ export interface ContactLink {
   isExternal?: boolean;
 }
 
+export interface LocationInfo {
+  text: string;
+  icon: string;
+  alt: string;
+  href: string;
+}
+
 export const contactLinks: ContactLink[] = [
   {
     href: 'mailto:ryleycreid@gmail.com',
@@ -35,7 +42,13 @@ export const contactLinks: ContactLink[] = [
   },
 ];
 
-export const location = 'Etobicoke, Toronto, ON';
+export const location: LocationInfo = {
+  text: 'Etobicoke, Toronto, ON',
+  icon: 'MapleLeaf',
+  alt: 'Canadian Location',
+  href: 'https://youtu.be/fF62J3vxPdQ?si=FO16KqZAPVrEHNQo&t=32'
+};    
+
 export const name = 'Ryley Reid';
 export const cvDownload = {
   href: '/RyleyReidCV.pdf',

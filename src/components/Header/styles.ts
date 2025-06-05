@@ -92,3 +92,9 @@ export const DownloadIcon = styled(SocialIcon)`
   height: 24px;
   margin: 0;
 `;
+
+export const LocationContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
