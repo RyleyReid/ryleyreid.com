@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import linkIcon from '../assets/linkIcon.png';
 
 const Section = styled.section`
   padding: 2rem;
@@ -44,6 +45,34 @@ const CompanyName = styled.h3`
   gap: 0.5rem;
 `;
 
+const CompanyLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #666;
+
+    img {
+      opacity: 1;
+    }
+  }
+`;
+
+const LinkIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
 const JobTitle = styled.h4`
   margin: 0.5rem 0;
   color: #444;
@@ -76,6 +105,7 @@ const Experience = () => {
       location: "Toronto, Ontario",
       title: "Full Stack Software Developer",
       dateRange: "Feb 2025 – Present",
+      link: "https://www1.appliedsystems.com/en-ca/",
       description: [
         "Built out the Premium financing system, servicing insurance agencies across the USA, UK, and Canada",
         "Collaborate with internal teams to build out internal npm packages and UI tooling",
@@ -88,6 +118,7 @@ const Experience = () => {
       location: "Toronto, Ontario",
       title: "Full Stack Software Developer",
       dateRange: "August 2022 – Present",
+      link: "https://www.ollon.ca/",
       description: [
         "Led and managed full-stack development projects using TypeScript, React, Node.js, and MySQL, ensuring timely delivery within Agile/Scrum frameworks",
         "Collaborate with clients in meetings to gather requirements, provide technical insights, and deliver tailored solutions",
@@ -100,6 +131,7 @@ const Experience = () => {
       location: "London, Ontario",
       title: "Full Stack Software Developer",
       dateRange: "May 2021 – August 2022",
+      link: "https://www.techshare.ca/",
       description: [
         "Update and maintain the user portal and Salesforce application pages using Angular, CSS, and JavaScript",
         "Manage and update a Salesforce database and APIs using APEX and SOQL",
@@ -112,6 +144,7 @@ const Experience = () => {
       location: "Ajax-Pickering, Ontario",
       title: "Self-Employed Franchisee",
       dateRange: "November 2019-August 2020",
+      link: "https://studentworks.com/",
       description: [
         "Independently managed labor crews completing contracts for residential and commercial painting",
         "Created and adapted the typical marketing campaign for a franchise to succeed during the COVID-19 lockdowns",
@@ -128,8 +161,10 @@ const Experience = () => {
           <JobHeader>
             <CompanyInfo>
               <CompanyName>
-                {job.company}
-                {job.company.includes("Applied Systems") && "🔗"}
+                <CompanyLink href={job.link} target="_blank" rel="noopener noreferrer">
+                  {job.company}
+                  <LinkIcon src={linkIcon} alt="Visit company website" />
+                </CompanyLink>
               </CompanyName>
               <Location>{job.location}</Location>
             </CompanyInfo>

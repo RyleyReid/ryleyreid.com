@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import linkIcon from '../assets/linkIcon.png';
 
 const Section = styled.section`
   padding: 2rem;
@@ -27,6 +28,37 @@ const SchoolInfo = styled.div`
 const SchoolName = styled.h3`
   margin: 0;
   color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+const SchoolLink = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #666;
+
+    img {
+      opacity: 1;
+    }
+  }
+`;
+
+const LinkIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  opacity: 0.6;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Location = styled.span`
@@ -50,7 +82,12 @@ const Education = () => {
       <SectionTitle>Education</SectionTitle>
       <EducationItem>
         <SchoolInfo>
-          <SchoolName>Western University</SchoolName>
+          <SchoolName>
+            <SchoolLink href="https://www.uwo.ca/index.html" target="_blank" rel="noopener noreferrer">
+              Western University
+              <LinkIcon src={linkIcon} alt="Visit Western University website" />
+            </SchoolLink>
+          </SchoolName>
           <Location>London, Ontario</Location>
         </SchoolInfo>
         <Degree>Honors Bachelor of Science in Computer Science, minor in Software Engineering</Degree>
