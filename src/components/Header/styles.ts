@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.header`
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   color: white;
   position: relative;

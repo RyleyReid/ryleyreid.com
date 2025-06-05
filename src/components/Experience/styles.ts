@@ -4,6 +4,7 @@ export const Section = styled.section`
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  border-radius: 8px 8px 0px 0px;
   background-color: #f9f9f9;
 `;
 
