@@ -5,12 +5,12 @@ export const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 8px 8px 0px 0px;
-  background-color: #f9f9f9;
+  background-color: #1a1a1a;
 `;
 
 export const SectionTitle = styled.h2`
-  color: #2a2a2a;
-  border-bottom: 2px solid #2a2a2a;
+  color: #f8f9fa;
+  border-bottom: 2px solid #f8f9fa;
   padding-bottom: 0.5rem;
   margin-bottom: 1.5rem;
 `;

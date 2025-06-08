@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const HeaderContainer = styled.header`
   text-align: center;
   padding: 1rem 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  background: none;
   color: white;
   position: relative;
 `;
@@ -24,7 +24,7 @@ export const ContactInfo = styled.div`
 `;
 
 export const ContactItem = styled.a`
-  color: #a0a0a0;
+  color:rgb(79, 79, 79);
   text-decoration: none;
   display: flex;
   align-items: center;

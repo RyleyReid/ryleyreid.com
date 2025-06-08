@@ -4,7 +4,7 @@ export const Section = styled.section`
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 0px 0px 8px 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 2rem;
 `;
 
