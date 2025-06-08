@@ -1,26 +1,27 @@
 import styled from '@emotion/styled';
+import { colors, spacing, borderRadius, shadows, typography } from '../../styles/theme';
 
 export const Section = styled.section`
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 0px 0px 8px 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  margin-bottom: 2rem;
+  padding: ${spacing.xl};
+  background-color: ${colors.background.primary};
+  border-radius: 0px 0px ${borderRadius.md} ${borderRadius.md};
+  box-shadow: ${shadows.md};
+  margin-bottom: ${spacing.xl};
 `;
 
 export const SectionTitle = styled.h2`
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
+  color: ${colors.text.primary};
+  margin-bottom: ${spacing.lg};
+  font-size: ${typography.fontSize.xl};
+  border-bottom: 2px solid ${colors.accent};
+  padding-bottom: ${spacing.sm};
 `;
 
 export const EducationItem = styled.div`
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-radius: 6px;
+  margin-bottom: ${spacing.xl};
+  padding: ${spacing.md};
+  background-color: ${colors.background.secondary};
+  border-radius: ${borderRadius.sm};
   transition: transform 0.2s ease-in-out;
 
   &:hover {
@@ -29,24 +30,24 @@ export const EducationItem = styled.div`
 `;
 
 export const SchoolName = styled.h3`
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  color: ${colors.text.primary};
+  margin-bottom: ${spacing.sm};
+  font-size: ${typography.fontSize.lg};
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
 `;
 
 export const SchoolLink = styled.a`
-  color: #2c3e50;
+  color: ${colors.text.primary};
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: #3498db;
+    color: ${colors.interactive.link};
   }
 `;
 
@@ -62,25 +63,25 @@ export const LinkIcon = styled.img`
 `;
 
 export const Degree = styled.p`
-  color: #34495e;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
+  color: ${colors.text.secondary};
+  font-weight: ${typography.fontWeight.medium};
+  margin-bottom: ${spacing.xs};
 `;
 
 export const Minor = styled.p`
-  color: #34495e;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
+  color: ${colors.text.secondary};
+  font-weight: ${typography.fontWeight.medium};
+  margin-bottom: ${spacing.xs};
 `;
 
 export const DateRange = styled.p`
-  color: #7f8c8d;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  color: ${colors.text.muted};
+  font-size: ${typography.fontSize.xs};
+  margin-bottom: ${spacing.sm};
 `;
 
 export const Description = styled.p`
-  color: #2c3e50;
-  font-size: 0.95rem;
+  color: ${colors.text.primary};
+  font-size: ${typography.fontSize.sm};
   line-height: 1.5;
 `;

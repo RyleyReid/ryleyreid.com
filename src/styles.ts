@@ -1,24 +1,14 @@
 import styled from '@emotion/styled';
+import { colors, typography, spacing } from './styles/theme';
 
 export const AppContainer = styled.div`
   min-height: 100vh;
-  background-color: #ffffff;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
+  background-color: ${colors.background.primary};
+  font-family: ${typography.fontFamily};
 `;
 
 export const MainContent = styled.main`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: ${spacing.xl} ${spacing.md};
 `;

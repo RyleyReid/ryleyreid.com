@@ -1,33 +1,34 @@
 import styled from '@emotion/styled';
+import { colors, spacing, borderRadius, shadows } from '../../styles/theme';
 
 export const Section = styled.section`
-  padding: 2rem;
+  padding: ${spacing.xl};
   max-width: 1200px;
   margin: 0 auto;
-  border-radius: 8px 8px 0px 0px;
-  background-color: #1a1a1a;
+  border-radius: ${borderRadius.md} ${borderRadius.md} 0px 0px;
+  background-color: ${colors.background.dark};
 `;
 
 export const SectionTitle = styled.h2`
-  color: #f8f9fa;
-  border-bottom: 2px solid #f8f9fa;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  color: ${colors.text.light};
+  border-bottom: 2px solid ${colors.text.light};
+  padding-bottom: ${spacing.sm};
+  margin-bottom: ${spacing.lg};
 `;
 
 export const JobItem = styled.div`
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: ${spacing.xl};
+  padding: ${spacing.md};
+  background: ${colors.background.primary};
+  border-radius: ${borderRadius.md};
+  box-shadow: ${shadows.sm};
 `;
 
 export const JobHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.5rem;
+  margin-bottom: ${spacing.sm};
 `;
 
 export const CompanyInfo = styled.div`
@@ -39,22 +40,22 @@ export const CompanyInfo = styled.div`
 
 export const CompanyName = styled.h3`
   margin: 0;
-  color: #2a2a2a;
+  color: ${colors.text.primary};
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
 `;
 
 export const CompanyLink = styled.a`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
   text-decoration: none;
   color: inherit;
   transition: all 0.2s;
 
   &:hover {
-    color: #666;
+    color: ${colors.text.muted};
 
     img {
       opacity: 1;
@@ -74,26 +75,26 @@ export const LinkIcon = styled.img`
 `;
 
 export const JobTitle = styled.h4`
-  margin: 0.5rem 0;
-  color: #444;
+  margin: ${spacing.sm} 0;
+  color: ${colors.text.secondary};
 `;
 
 export const Location = styled.span`
-  color: #666;
+  color: ${colors.text.muted};
 `;
 
 export const DateRange = styled.span`
-  color: #666;
+  color: ${colors.text.muted};
   font-style: italic;
 `;
 
 export const Description = styled.ul`
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
-  color: #444;
+  margin: ${spacing.sm} 0;
+  padding-left: ${spacing.lg};
+  color: ${colors.text.secondary};
 `;
 
 export const DescriptionItem = styled.li`
-  margin: 0.5rem 0;
+  margin: ${spacing.sm} 0;
   line-height: 1.5;
 `;
