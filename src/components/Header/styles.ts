@@ -25,7 +25,7 @@ export const ContactInfo = styled.div`
 `;
 
 export const ContactItem = styled.a`
-  color: ${colors.text.muted};
+  color: ${colors.text.secondary};
   text-decoration: none;
   display: flex;
   align-items: center;

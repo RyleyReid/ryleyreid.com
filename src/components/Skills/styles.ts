@@ -2,14 +2,15 @@ import styled from '@emotion/styled';
 import { colors, spacing, borderRadius, typography } from '../../styles/theme';
 
 export const Section = styled.section`
-  padding: ${spacing.xl};
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: ${colors.background.secondary};
+  margin: 0 ${spacing.xl};
+  padding: ${spacing.sm};
+  background-color: ${colors.background.primary};
+  border-radius: ${borderRadius.md};
+  margin-bottom: ${spacing.xl};
 `;
 
 export const SectionTitle = styled.h2`
-  color: ${colors.text.primary};
+  color: ${colors.text.secondary};
   border-bottom: 2px solid ${colors.text.primary};
   padding-bottom: ${spacing.sm};
   margin-bottom: ${spacing.lg};

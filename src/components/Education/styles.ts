@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 import { colors, spacing, borderRadius, shadows, typography } from '../../styles/theme';
 
 export const Section = styled.section`
-  padding: ${spacing.xl};
+  margin: 0 ${spacing.xl};
+  padding: 0 ${spacing.sm};
   background-color: ${colors.background.primary};
-  border-radius: 0px 0px ${borderRadius.md} ${borderRadius.md};
+  border-radius: ${borderRadius.md};
   box-shadow: ${shadows.md};
   margin-bottom: ${spacing.xl};
 `;
