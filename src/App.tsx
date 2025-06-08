@@ -3,11 +3,13 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Background3D from './components/Background3D';
+import SpinEffect from './components/SpinEffect';
 import styled from '@emotion/styled';
 
 const AppContainer = styled.div`
   min-height: 100vh;
   background: transparent;
+  perspective: 1000px;
 `;
 
 const ContentContainer = styled.div`
@@ -16,6 +18,7 @@ const ContentContainer = styled.div`
   padding: 0 1rem;
   position: relative;
   z-index: 1;
+  transform-style: preserve-3d;
 `;
 
 function App() {
@@ -28,6 +31,7 @@ function App() {
         <Education />
         <Skills />
       </ContentContainer>
+      <SpinEffect />
     </AppContainer>
   );
 }
