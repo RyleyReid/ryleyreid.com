@@ -33,5 +33,6 @@ export const SkillTag = styled.span`
   &:hover {
     transform: translateY(-2px);
     background: ${colors.interactive.hover};
+    cursor: pointer;
   }
 `;
