@@ -4,6 +4,7 @@ export const Section = styled.section`
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  border-radius: 1rem;
   background-color: rgba(249, 249, 249, 0.85); /* #f9f9f9 with 75% opacity */
 `;
 

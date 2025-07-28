@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
-  padding: 2rem;
-  background-color: #ffffff;
+  padding: 0 2rem 2rem 2rem;
+  background-color: rgba(249, 249, 249, 0.7);
   border-radius: 0px 0px 8px 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;

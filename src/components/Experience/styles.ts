@@ -5,7 +5,7 @@ export const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 8px 8px 0px 0px;
-  background-color: #f9f9f9;
+  background-color: rgba(249, 249, 249, 0.7);
 `;
 
 export const SectionTitle = styled.h2`
