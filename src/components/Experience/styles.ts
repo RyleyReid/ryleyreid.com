@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { colors, spacing, borderRadius, shadows } from '../../styles/theme';
 
 export const Section = styled.section`
-  padding: ${spacing.xl} ${spacing.xl} 0 ${spacing.xl};
+  padding: ${spacing.xl} ${spacing.xl} ${spacing.xl};
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 8px 8px 0px 0px;

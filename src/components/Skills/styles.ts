@@ -11,7 +11,7 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h2`
   color: ${colors.text.secondary};
-  border-bottom: 2px solid ${colors.text.primary};
+  border-bottom: 2px solid ${colors.text.light};
   padding-bottom: ${spacing.sm};
   margin-bottom: ${spacing.lg};
 `;

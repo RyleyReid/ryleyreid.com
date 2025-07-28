@@ -25,7 +25,7 @@ export const ContactInfo = styled.div`
 `;
 
 export const ContactItem = styled.a`
-  color: ${colors.text.secondary};
+  color: ${colors.text.primary};
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -50,6 +50,7 @@ export const SocialIcon = styled.img`
 `;
 
 export const TextContact = styled.span`
+  color: ${colors.text.light};
   font-size: ${typography.fontSize.xs};
 `;
 
