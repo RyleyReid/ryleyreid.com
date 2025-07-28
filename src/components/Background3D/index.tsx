@@ -95,7 +95,7 @@ const Background3D = () => {
       width: '100%',
       height: '100%',
       zIndex: -1,
-      background: 'linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%)'
+      background: 'linear-gradient(135deg,rgb(255, 255, 255) 0%, #2a2a2a 100%)'
     }}>
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />

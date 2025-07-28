@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { colors, spacing, borderRadius, shadows, typography, breakpoints } from '../../styles/theme';
 
 export const HeaderContainer = styled.header`
   text-align: center;
@@ -9,30 +10,30 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Name = styled.h1`
-  font-size: 2.5rem;
+  font-size: ${typography.fontSize.xxl};
   margin: 0;
-  color: #ffffff;
+  color: ${colors.text.light};
 `;
 
 export const ContactInfo = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: ${spacing.lg};
+  margin-top: ${spacing.md};
   flex-wrap: wrap;
   align-items: center;
 `;
 
 export const ContactItem = styled.a`
-  color: #a0a0a0;
+  color: ${colors.text.secondary};
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
   transition: all 0.2s;
 
   &:hover {
-    color: #ffffff;
+    color: ${colors.text.light};
     transform: translateY(-2px);
   }
 `;
@@ -49,23 +50,23 @@ export const SocialIcon = styled.img`
 `;
 
 export const TextContact = styled.span`
-  font-size: 0.9rem;
+  font-size: ${typography.fontSize.xs};
 `;
 
 export const DownloadButton = styled.a`
   position: absolute;
-  right: 2rem;
+  right: ${spacing.xl};
   top: 50%;
   transform: translateY(-50%);
-  background: #ffffff;
-  color: #1a1a1a;
+  background: ${colors.background.primary};
+  color: ${colors.text.primary};
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: ${borderRadius.full};
   text-decoration: none;
-  font-weight: 600;
+  font-weight: ${typography.fontWeight.semibold};
   transition: all 0.2s;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: ${shadows.sm};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,16 +74,16 @@ export const DownloadButton = styled.a`
 
   &:hover {
     transform: translateY(-50%) translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: #f0f0f0;
+    box-shadow: ${shadows.md};
+    background: ${colors.background.secondary};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: ${breakpoints.md}) {
     position: relative;
     right: auto;
     top: auto;
     transform: none;
-    margin-top: 1rem;
+    margin-top: ${spacing.md};
     display: inline-flex;
   }
 `;
@@ -96,5 +97,5 @@ export const DownloadIcon = styled(SocialIcon)`
 export const LocationContainer = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: ${spacing.sm};
 `;
