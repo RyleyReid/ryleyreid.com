@@ -3,7 +3,7 @@ export interface Job {
   location: string;
   title: string;
   dateRange: string;
-  link: string;
+  link?: string;
   description: string[];
 }
 
@@ -13,12 +13,11 @@ export const jobs: Job[] = [
     location: 'Toronto, Ontario',
     title: 'Full Stack Software Developer',
     dateRange: 'Feb 2025 – Present',
-    link: 'https://www1.appliedsystems.com/en-ca/',
     description: [
-      'Built out the Premium financing system, servicing insurance agencies across the USA, UK, and Canada',
-      'Collaborate with internal teams to build out internal npm packages and UI tooling',
-      'Developed and expanded email and client notification systems',
-      'On-call support for system issues and dropped payments',
+      'Core contributor to a newly launched premium finance payments product, scaling transaction volume from <$1M/month to $100M+/month within one year across the US, UK, and Canada',
+      'Built and maintained financial workflows supporting high-value, time-sensitive transactions for insurance agencies',
+      'Took on-call ownership of production systems, resolving payment failures and system issues with customer impact',
+      'Implemented monitoring and observability for Kubernetes-hosted services to ensure reliability as the product scaled',
     ],
   },
   {
@@ -28,9 +27,9 @@ export const jobs: Job[] = [
     dateRange: 'August 2022 – Present',
     link: 'https://www.ollon.ca/',
     description: [
-      'Led and managed full-stack development projects using TypeScript, React, Node.js, and MySQL, ensuring timely delivery within Agile/Scrum frameworks',
-      'Collaborate with clients in meetings to gather requirements, provide technical insights, and deliver tailored solutions',
-      'Develop and integrate REST APIs, and implement DevOps practices using Git and Docker',
+      'Owned end-to-end development of customer-facing product features, from requirements gathering to production release',
+      'Built and maintained applications using TypeScript, React, and Node.js, shipping features used by real customers',
+      'Collaborated closely with product managers and clients to turn ambiguous requirements into polished solutions',
       'Conducted code reviews, wrote unit tests, and mentored junior developers to uphold high-quality standards',
     ],
   },
@@ -41,10 +40,22 @@ export const jobs: Job[] = [
     dateRange: 'May 2021 – August 2022',
     link: 'https://www.techshare.ca/',
     description: [
-      'Update and maintain the user portal and Salesforce application pages using Angular, CSS, and JavaScript',
-      'Manage and update a Salesforce database and APIs using APEX and SOQL',
-      'Collaborated and created scalable code with my team using a scrum framework, unit testing, and Code reviews',
-      'Over 12,000 Trailhead points',
+      'Updated and maintained the user portal and Salesforce application pages using Angular, CSS, and JavaScript',
+      'Managed and updated a Salesforce database and APIs using APEX and SOQL',
+      'Collaborated and created scalable code with my team using a Scrum framework, unit testing, and code reviews',
+      'Earned over 12,000 Salesforce Trailhead points',
+    ],
+  },
+  {
+    company: 'True Syntax',
+    location: 'Toronto, Ontario',
+    title: 'CEO & Founder',
+    dateRange: 'November 2023 – Present',
+    description: [
+      'Founded and lead a software consulting studio, delivering modern web products for early-stage companies and small teams',
+      'Took full ownership of projects end-to-end: product planning, UX decisions, development, deployment, and iteration based on client feedback',
+      'Built responsive, user-focused applications with React/TypeScript front ends and Node.js back ends, emphasizing clarity and usability',
+      'Worked directly with customers to understand workflows, ship quickly, and refine features based on real-world usage',
     ],
   },
   {

@@ -25,10 +25,14 @@ const Experience = () => {
           <JobHeader>
             <CompanyInfo>
               <CompanyName>
-                <CompanyLink href={job.link} target="_blank" rel="noopener noreferrer">
-                  {job.company}
-                  <LinkIcon src={linkIcon} alt="Visit company website" />
-                </CompanyLink>
+                {job.link ? (
+                  <CompanyLink href={job.link} target="_blank" rel="noopener noreferrer">
+                    {job.company}
+                    <LinkIcon src={linkIcon} alt="Visit company website" />
+                  </CompanyLink>
+                ) : (
+                  job.company
+                )}
               </CompanyName>
               <Location>{job.location}</Location>
             </CompanyInfo>
