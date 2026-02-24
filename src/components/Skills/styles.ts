@@ -6,11 +6,11 @@ export const Section = styled.section`
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 1rem;
-  background-color: rgba(249, 249, 249, 0.85); /* #f9f9f9 with 75% opacity */
+  background-color: rgba(15, 23, 42, 0.85);
 `;
 
 export const SectionTitle = styled.h2`
-  color: ${colors.text.secondary};
+  color: ${colors.text.light};
   border-bottom: 2px solid ${colors.text.light};
   padding-bottom: ${spacing.sm};
   margin-bottom: ${spacing.lg};

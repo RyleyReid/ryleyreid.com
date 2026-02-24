@@ -3,14 +3,14 @@ import { colors, spacing, borderRadius, typography } from '../../styles/theme';
 
 export const Section = styled.section`
   padding: 0 2rem 2rem 2rem;
-  background-color: rgba(249, 249, 249, 0.7);
-  border-radius: 0px 0px 8px 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(15, 23, 42, 0.85);
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 2rem;
 `;
 
 export const SectionTitle = styled.h2`
-  color: ${colors.text.primary};
+  color: ${colors.text.light};
   margin-bottom: ${spacing.lg};
   font-size: ${typography.fontSize.xl};
   border-bottom: 2px solid ${colors.accent};
@@ -20,7 +20,7 @@ export const SectionTitle = styled.h2`
 export const EducationItem = styled.div`
   margin-bottom: ${spacing.xl};
   padding: ${spacing.md};
-  background-color: ${colors.background.secondary};
+  background-color: rgba(15, 23, 42, 0.95);
   border-radius: ${borderRadius.sm};
   transition: transform 0.2s ease-in-out;
 
@@ -30,7 +30,7 @@ export const EducationItem = styled.div`
 `;
 
 export const SchoolName = styled.h3`
-  color: ${colors.text.primary};
+  color: ${colors.text.light};
   margin-bottom: ${spacing.sm};
   font-size: ${typography.fontSize.lg};
   display: flex;
@@ -63,13 +63,13 @@ export const LinkIcon = styled.img`
 `;
 
 export const Degree = styled.p`
-  color: ${colors.text.secondary};
+  color: ${colors.text.light};
   font-weight: ${typography.fontWeight.medium};
   margin-bottom: ${spacing.xs};
 `;
 
 export const Minor = styled.p`
-  color: ${colors.text.secondary};
+  color: ${colors.text.light};
   font-weight: ${typography.fontWeight.medium};
   margin-bottom: ${spacing.xs};
 `;
@@ -81,7 +81,7 @@ export const DateRange = styled.p`
 `;
 
 export const Description = styled.p`
-  color: ${colors.text.primary};
+  color: ${colors.text.light};
   font-size: ${typography.fontSize.sm};
   line-height: 1.5;
 `;

@@ -13,6 +13,7 @@ export const jobs: Job[] = [
     location: 'Toronto, Ontario',
     title: 'Full Stack Software Developer',
     dateRange: 'Feb 2025 – Present',
+    link: 'https://www1.appliedsystems.com/',
     description: [
       'Core contributor to a newly launched premium finance payments product, scaling transaction volume from <$1M/month to $100M+/month within one year across the US, UK, and Canada',
       'Built and maintained financial workflows supporting high-value, time-sensitive transactions for insurance agencies',
@@ -51,6 +52,7 @@ export const jobs: Job[] = [
     location: 'Toronto, Ontario',
     title: 'CEO & Founder',
     dateRange: 'November 2023 – Present',
+    link: 'https://www.true-syntax.com/',
     description: [
       'Founded and lead a software consulting studio, delivering modern web products for early-stage companies and small teams',
       'Took full ownership of projects end-to-end: product planning, UX decisions, development, deployment, and iteration based on client feedback',

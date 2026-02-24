@@ -2,11 +2,20 @@ import styled from '@emotion/styled';
 import { colors, spacing, borderRadius, shadows, typography, breakpoints } from '../../styles/theme';
 
 export const HeaderContainer = styled.header`
-  text-align: center;
-  padding: 1rem 0;
-  background: none;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: ${spacing.md};
+  margin-bottom: ${spacing.lg};
+  color: ${colors.text.light};
+  padding: ${spacing.lg};
+  border-radius: ${borderRadius.lg};
+  background: rgba(15, 23, 42, 0.85);
+  box-shadow: ${shadows.md};
   position: relative;
+
+  @media (max-width: ${breakpoints.md}) {
+    padding: ${spacing.md};
+  }
 `;
 
 export const Name = styled.h1`
@@ -17,15 +26,15 @@ export const Name = styled.h1`
 
 export const ContactInfo = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: ${spacing.lg};
-  margin-top: ${spacing.md};
+  margin-top: ${spacing.sm};
   flex-wrap: wrap;
   align-items: center;
 `;
 
 export const ContactItem = styled.a`
-  color: ${colors.text.primary};
+  color: ${colors.text.light};
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -56,13 +65,12 @@ export const TextContact = styled.span`
 
 export const DownloadButton = styled.a`
   position: absolute;
-  right: ${spacing.xl};
-  top: 50%;
-  transform: translateY(-50%);
+  top: ${spacing.lg};
+  right: ${spacing.lg};
+  width: 42px;
+  height: 42px;
   background: ${colors.background.primary};
   color: ${colors.text.primary};
-  width: 40px;
-  height: 40px;
   border-radius: ${borderRadius.full};
   text-decoration: none;
   font-weight: ${typography.fontWeight.semibold};
@@ -74,18 +82,9 @@ export const DownloadButton = styled.a`
   padding: 0;
 
   &:hover {
-    transform: translateY(-50%) translateY(-2px);
     box-shadow: ${shadows.md};
     background: ${colors.background.secondary};
-  }
-
-  @media (max-width: ${breakpoints.md}) {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    margin-top: ${spacing.md};
-    display: inline-flex;
+    transform: translateY(-1px);
   }
 `;
 

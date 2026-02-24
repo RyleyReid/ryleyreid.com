@@ -10,11 +10,11 @@ export interface Education {
 export const education: Education[] = [
   {
     school: 'Western University',
-    degree: 'Bachelor of Science, Computer Science',
+    degree: 'Honors Bachelor of Science in Computer Science',
     minor: 'Software Engineering',
-    dateRange: '2019 - 2023',
+    dateRange: 'Graduated April 2021',
     description:
-      'Graduated with distinction. Relevant coursework: Data Structures, Algorithms, Software Design, Database Systems, Web Development, Mobile App Development, Computer Networks, Operating Systems.',
+      'Coursework: Video Game Development, Data Science, Artificial Intelligence, Data Structures, and Algorithms.',
     link: 'https://www.uwo.ca/',
   },
 ];

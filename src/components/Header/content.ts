@@ -52,7 +52,7 @@ export const location: LocationInfo = {
 export const name = 'Ryley Reid';
 export const cvDownload = {
   href: '/RyleyReidCV.pdf',
-  downloadName: 'RyleyReid_CV.pdf',
+  downloadName: 'RyleyReid_Resume_2026.pdf',
   icon: 'download',
   alt: 'Download CV',
 };

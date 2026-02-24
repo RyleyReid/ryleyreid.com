@@ -5,8 +5,9 @@ export const Section = styled.section`
   padding: ${spacing.xl} ${spacing.xl} ${spacing.xl};
   max-width: 1200px;
   margin: 0 auto;
-  border-radius: 8px 8px 0px 0px;
-  background-color: rgba(249, 249, 249, 0.7);
+  border-radius: ${borderRadius.lg};
+  background-color: rgba(15, 23, 42, 0.85);
+  box-shadow: ${shadows.md};
 `;
 
 export const SectionTitle = styled.h2`
@@ -19,7 +20,7 @@ export const SectionTitle = styled.h2`
 export const JobItem = styled.div`
   margin-bottom: ${spacing.xl};
   padding: ${spacing.md};
-  background: ${colors.background.primary};
+  background: rgba(15, 23, 42, 0.95);
   border-radius: ${borderRadius.md};
   box-shadow: ${shadows.sm};
 `;
@@ -40,7 +41,7 @@ export const CompanyInfo = styled.div`
 
 export const CompanyName = styled.h3`
   margin: 0;
-  color: ${colors.text.primary};
+  color: ${colors.text.light};
   display: flex;
   align-items: center;
   gap: ${spacing.sm};
@@ -76,7 +77,7 @@ export const LinkIcon = styled.img`
 
 export const JobTitle = styled.h4`
   margin: ${spacing.sm} 0;
-  color: ${colors.text.secondary};
+  color: ${colors.text.light};
 `;
 
 export const Location = styled.span`
@@ -91,7 +92,7 @@ export const DateRange = styled.span`
 export const Description = styled.ul`
   margin: ${spacing.sm} 0;
   padding-left: ${spacing.lg};
-  color: ${colors.text.secondary};
+  color: ${colors.text.light};
 `;
 
 export const DescriptionItem = styled.li`
