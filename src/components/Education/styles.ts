@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { colors, spacing, borderRadius, shadows, typography } from '../../styles/theme';
+import { colors, spacing, borderRadius, typography } from '../../styles/theme';
 
 export const Section = styled.section`
   padding: 0 2rem 2rem 2rem;
