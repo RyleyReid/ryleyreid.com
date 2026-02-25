@@ -3,9 +3,26 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, PerspectiveCamera } from '@react-three/drei';
 import * as THREE from 'three';
 
-// Import all icons
-const techLogos = import.meta.glob('/src/assets/techLogos/*.png', { eager: true });
-const personalIcons = import.meta.glob('/src/assets/personalIcons/*.svg', { eager: true });
+const techLogos = [
+  '/techLogos/Angular.png',
+  '/techLogos/astro.png',
+  '/techLogos/CPP.png',
+  '/techLogos/Docker.png',
+  '/techLogos/GIT.png',
+  '/techLogos/JavaScript.png',
+  '/techLogos/NodeJS.png',
+  '/techLogos/REACT.png',
+  '/techLogos/TypeScript.png'
+]
+
+const personalIcons = [
+  '/personalIcons/canada.svg',
+  '/personalIcons/hockey.svg',
+  '/personalIcons/italy.svg',
+  '/personalIcons/rocket.svg',
+  '/personalIcons/sailboat.svg',
+  '/personalIcons/scotland.svg'
+]
 
 interface FloatingIconProps {
   texture: THREE.Texture;
@@ -68,17 +85,16 @@ const Background3D = () => {
       const loadedIcons: THREE.Texture[] = [];
 
       // Load tech logos
-      for (const path in techLogos) {
-        const texture = await textureLoader.loadAsync(path);
-        texture.needsUpdate = true;
-        loadedIcons.push(texture);
+      for (const url of techLogos) {
+        const texture = await textureLoader.loadAsync(url)
+        texture.needsUpdate = true
+        loadedIcons.push(texture)
       }
-
-      // Load personal icons
-      for (const path in personalIcons) {
-        const texture = await textureLoader.loadAsync(path);
-        texture.needsUpdate = true;
-        loadedIcons.push(texture);
+      
+      for (const url of personalIcons) {
+        const texture = await textureLoader.loadAsync(url)
+        texture.needsUpdate = true
+        loadedIcons.push(texture)
       }
 
       setIcons(loadedIcons);
