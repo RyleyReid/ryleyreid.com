@@ -1,8 +1,3 @@
-import githubLogo from '../../assets/GithubLogo.png';
-import linkedInLogo from '../../assets/linkedInLogo.png';
-import instagramLogo from '../../assets/InstagramLogo.png';
-import download from '../../assets/download.png';
-import mapleLeaf from '../../assets/mapleleaf.png';
 import { contactLinks, location, name, cvDownload } from './content';
 import {
   HeaderContainer,
@@ -13,24 +8,20 @@ import {
   TextContact,
   DownloadButton,
   DownloadIcon,
-  LocationContainer
+  LocationContainer,
 } from './styles';
 
+const ICON_BASE = '/assets/icons';
+
 const getIconSrc = (iconName: string) => {
-  switch (iconName) {
-    case 'GithubLogo':
-      return githubLogo;
-    case 'linkedInLogo':
-      return linkedInLogo;
-    case 'InstagramLogo':
-      return instagramLogo;
-    case 'download':
-      return download;
-    case 'MapleLeaf':
-      return mapleLeaf;
-    default:
-      return '';
-  }
+  const map: Record<string, string> = {
+    GithubLogo: `${ICON_BASE}/GithubLogo.png`,
+    linkedInLogo: `${ICON_BASE}/linkedInLogo.png`,
+    InstagramLogo: `${ICON_BASE}/InstagramLogo.png`,
+    download: `${ICON_BASE}/download.png`,
+    MapleLeaf: `${ICON_BASE}/mapleleaf.png`,
+  };
+  return map[iconName] || '';
 };
 
 const Header = () => {

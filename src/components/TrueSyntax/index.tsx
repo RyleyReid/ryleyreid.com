@@ -1,4 +1,3 @@
-import displayPicture from '../../assets/display picture.JPG';
 import { trueSyntaxSummary } from './content';
 import {
   TrueSyntaxSection,
@@ -15,6 +14,8 @@ import {
   HeroTitle,
   HeroTagline,
 } from './styles';
+
+const displayPictureSrc = '/assets/display-picture.jpg';
 
 const TrueSyntax = () => {
   return (
@@ -35,7 +36,7 @@ const TrueSyntax = () => {
       </TrueSyntaxMeta>
       <HeroCard>
         <AvatarWrapper>
-          <Avatar src={displayPicture} alt="Ryley Reid" />
+          <Avatar src={displayPictureSrc} alt="Ryley Reid" />
         </AvatarWrapper>
         <HeroText>
           <HeroTitle>Building modern, scalable software</HeroTitle>

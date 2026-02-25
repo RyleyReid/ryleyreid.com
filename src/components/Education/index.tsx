@@ -1,4 +1,3 @@
-import linkIcon from '../../assets/linkIcon.png';
 import { education } from './content';
 import {
   Section,
@@ -13,6 +12,8 @@ import {
   Minor,
 } from './styles';
 
+const linkIconSrc = '/assets/icons/linkIcon.png';
+
 const Education = () => {
   return (
     <Section>
@@ -22,7 +23,7 @@ const Education = () => {
           <SchoolName>
             <SchoolLink href={edu.link} target="_blank" rel="noopener noreferrer">
               {edu.school}
-              <LinkIcon src={linkIcon} alt="Visit school website" />
+              <LinkIcon src={linkIconSrc} alt="Visit school website" />
             </SchoolLink>
           </SchoolName>
           <Degree>
